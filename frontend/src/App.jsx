@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Grid,
@@ -39,7 +39,14 @@ const App = () => {
 
   return (
     <Box px={12} py={6}>
-      <Text fontSize='4xl' fontWeight='bold' mb={4} textAlign={"center"}>
+      <Text
+        as='h1'
+        role='heading'
+        fontSize='4xl'
+        fontWeight='bold'
+        mb={4}
+        textAlign={"center"}
+      >
         User Directory
       </Text>
 
@@ -50,7 +57,7 @@ const App = () => {
           alignItems='center'
           minHeight='95vh'
         >
-          <Spinner size='xl' />
+          <Spinner size='xl' aria-label='loading-spinner' />
         </Box>
       ) : (
         <SimpleGrid

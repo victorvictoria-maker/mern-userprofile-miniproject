@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -38,7 +38,7 @@ const UserModal = ({ isOpen, onClose, userId }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
-      <ModalContent bgColor={"purple.600"} color={"white"}>
+      <ModalContent bgColor={"purple.600"} color={"white"} role='dialog'>
         <ModalHeader>
           <Text fontSize='lg' fontWeight='bold'>
             {user?.firstName} {user?.lastName}
